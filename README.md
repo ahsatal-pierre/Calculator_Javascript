@@ -1,2 +1,2 @@
-# Calculator_Javascript
-a calculator all in JS HTML CSS
+# calculator
+in JAvascript HTML and CSS only

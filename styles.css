@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: rgb(219, 219, 219);
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  min-width: 50vw;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(7, 90px);
+  grid-template-areas:
+    "ecran ecran ecran"
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". egal egal";
+}
+
+.grid > .button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.grid > .button:hover {
+  background-color: rgba(48, 47, 47, 0.9);
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+#equalButton {
+  background-color: #73c2ffff;
+  grid-area: egal;
+}
+
+#num {
+  background-color: white;
+}
+
+#op {
+  background-color: rgb(221, 220, 220);
+}
+
+#ecran {
+  background-color: rgb(197, 197, 197);
+  font-size: xx-large;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
