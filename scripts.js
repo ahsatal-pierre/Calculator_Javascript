@@ -77,7 +77,7 @@ function handleTouches(event) {
     switch (touche) {
       // clear
       case "C":
-      case "Escape":
+      case "Backspace":
         precedent = 0;
         display = "";
         operation = null;
@@ -106,7 +106,7 @@ function handleTouches(event) {
         precedent =
           precedent === 0
             ? parseFloat(display)
-            : calculer(precedent, parseFloat(display), operation);
+            : calculer(precedent, parseFloat(display), operation).toFixed(2);
         // update the screen
         displayElement.innerText = precedent;
         // update display
